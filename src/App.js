@@ -1,18 +1,15 @@
 import React from "react";
 import { observer } from "mobx-react";
-import AppStore from './App.store.js'
+import Player from './components/Player/Player'
 
 @observer
 export default class App extends React.Component {
-    onClick() {
-        AppStore.number++
-    }
 
     render() {
         return (
             <div>
-                {AppStore.number}
-                <div onClick={this.onClick}>Click me</div>
+                <Player name='Dealer' />
+                <Player name='Player' />
             </div>
         );
     }
